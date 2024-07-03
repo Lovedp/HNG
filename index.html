@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HNG ASSIGNMENT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+  <div class='logo'>
+    <h1>My Tech Goals</h1>
+    </div>
+    <div class="profile">
+      <img src="img/ife.jpg" alt="Profile Picture" data-testid="slackProfilePicture">
+      <div>
+        <h3 data-testid="slackDisplayName">Raji Ifedolapo Emmanuel</h3>
+        <p data-testid="slackEmail">Ifedolapoemmanuel98@gmail.com</p>
+      </div>
+    </div>
+	
+	<div class='current'>
+    
+    <p>Current Time in UTC: <span data-testid="currentTimeUTC"></span></p>
+    <p>Current Day of the Week: <span data-testid="currentDay"></span></p>
+    </div>
+    <div class="links">
+      <a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
+      <a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a>
+      <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrapeanyweb</a>
+    </div>
+    
+    <div class="tech-goals">
+      <h2>My Tech Goals for the Next 2 Years</h2>
+      <p>
+        In the next two years, I aim to:
+        <ul>
+          <li>Become proficient in React.js and build complex web applications</li>
+          <li>Learn backend development with Node.js and Express</li>
+          <li>Gain experience in cloud computing and deploy applications to platforms like AWS or Google Cloud</li>
+          <li>Contribute to open-source projects and build a strong portfolio</li>
+          <li>Attend tech conferences and meetups to network and learn from industry experts</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  
+  <script>
+    // Display the current time in UTC
+    const currentTimeUTC = document.getElementById('currentTimeUTC');
+    currentTimeUTC.textContent = new Date().toUTCString();
+    
+    // Display the current day of the week
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDay = document.getElementById('currentDay');
+    currentDay.textContent = daysOfWeek[new Date().getDay()];
+  </script>
+</body>
+</html>
